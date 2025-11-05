@@ -1,4 +1,3 @@
-# SiteDoLivro
-Este é um site sobre os livros "Filhos do Quarto"  "Pássaro contra a vidraça".
+# SiteDeGuitarra
+Este é um site sobre alguns modelos de guitarra mais interessantes e famosos.
 
-https://rafaelcostadelima.github.io/SiteDoLivro/index.html
