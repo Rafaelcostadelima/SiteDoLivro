@@ -34,6 +34,7 @@
   --vermelho: #ff0841;
   --branco: #ebdfcc;
 }
+
 :root { 
   --background-color: #02031a; 
   --default-color: #ebdfcc;
@@ -803,7 +804,7 @@ section,
 }
 
 .hero .hero-wrapper .hero-content .action-buttons .btn-primary {
-  background: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -897,26 +898,20 @@ section,
   transition: all 0.3s ease;
 }
 
-.hero .feature-cards-wrapper .feature-card:hover,
-.hero .feature-cards-wrapper .feature-card.active {
+.hero .feature-cards-wrapper .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgb(0, 0, 0);
 }
 
-.hero .feature-cards-wrapper .feature-card.active {
-  background: var(--surface-color);
-  border-left: 4px solid var(--accent-color);
-}
-
-.hero .feature-cards-wrapper .feature-card.active .feature-icon {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+.hero .feature-cards-wrapper .feature-card:hover .feature-icon {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--branco);
 }
 
 .hero .feature-cards-wrapper .feature-card .feature-icon {
   width: 60px;
   height: 60px;
-  background: color-mix(in srgb, var(--heading-color), transparent 90%);
+  background: color-mix(in srgb, var(--accent-color), transparent 60%);
   color: var(--heading-color);
   border-radius: 12px;
   display: flex;
@@ -940,6 +935,7 @@ section,
   font-size: 0.9rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
+  text-align: justify;
 }
 
 .hero .upcoming-event {
