@@ -933,7 +933,7 @@ section,
 
 .hero .feature-cards-wrapper .feature-card .feature-content p {
   font-size: 0.9rem;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   margin: 0;
   text-align: justify;
 }
@@ -8326,11 +8326,4 @@ section,
   .error-404 .search-box {
     margin: 0 20px;
   }
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
