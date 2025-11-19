@@ -8327,3 +8327,60 @@ section,
     margin: 0 20px;
   }
 }
+
+/* --------------------------------------------------------------
+# Customização da Modal (Tema Escuro AGUCTA)
+-------------------------------------------------------------- */
+
+/* Fundo e Borda da Modal */
+.modal-content {
+  background-color: var(--azul);
+  color: var(--default-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 50%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Linhas divisórias sutis */
+.modal-header, .modal-footer, .modal-body hr {
+  border-color: color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+/* Título em destaque */
+.modal-title {
+  font-family: var(--heading-font);
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* O botão 'X' de fechar (Inverte a cor para ficar branco/bege) */
+.btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.modal-body p{
+  color: var(--branco);
+}
+
+/* Links dentro da modal */
+.modal-body a {
+  color: var(--branco);
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+.modal-body a:hover {
+  color: var(--accent-color);
+  padding-left: 5px;
+}
+
+.modal-body i {
+  color: var(--accent-color);
+}
+
+/* Caixa de alerta customizada para o tema escuro */
+.alert-custom {
+  background-color: var(--azul-escuro); /* #02031a */
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
