@@ -4,73 +4,117 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>AGUCTA - Principal</title>
-  <meta name="description" content="Este site é sobre diversas guitarras mais interessantes e curiosidades sobre elas">
-  <meta name="keywords" content="">
+  <title>Stratocaster - AGUCTA</title>
+  <meta name="description" content="Detalhes sobre a Fender Stratocaster">
 
   <!-- Favicons -->
   <link href="assets/img/LogoSiteGuitarra.ico" rel="icon">
-  <link href="assets/img/LogoSiteGuitarra.ico" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Fonts e CSS (Mesmos do index) -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: College
-  * Template URL: https://bootstrapmade.com/college-bootstrap-education-template/
-  * Updated: Jun 19 2025 with Bootstrap v5.3.6
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- CSS Específico para corrigir detalhes do Dark Mode nessa página -->
+  <style>
+    /* Ajuste da caixa lateral para o tema escuro */
+    .course-info {
+      background: var(--azul);
+      /* Seu azul médio */
+      padding: 30px;
+      box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .course-info h3 {
+      color: var(--accent-color);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .course-info p {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      color: var(--branco);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+    }
+
+    /* Ajuste das Abas (Tabs) */
+    .nav-tabs .nav-link {
+      color: var(--branco);
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: var(--accent-color);
+      color: var(--branco);
+      border-color: var(--accent-color);
+    }
+
+    .tab-pane {
+      color: var(--branco);
+      padding-top: 20px;
+    }
+
+    .tab-pane h3 {
+      color: var(--accent-color);
+    }
+
+    /* Estilização do Accordion para Tema Escuro */
+    .accordion-button::after {
+      filter: invert(1);
+      /* Deixa a setinha do accordion branca */
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: var(--accent-color);
+      background-color: rgba(255, 255, 255, 0.05);
+      /* Leve destaque quando aberto */
+    }
+
+    .bg-darker {
+      background-color: rgba(0, 0, 0, 0.2);
+      /* Um tom levemente diferente para separar seções */
+    }
+  </style>
 </head>
 
-<body class="index-page">
+<body class="course-details-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div
       class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/LogoSiteGuitarra.ico" alt="Logo com AGUCTA escrito em branco">
+        <img src="assets/img/LogoSiteGuitarra.ico" alt="">
         <h1 class="sitename">AGUCTA</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Início</a></li>
-          <li><a href="#about">História</a></li>
-          <li class="dropdown"><a href="#"><span>Páginas removíveis</span> <i
+          <!-- Link para voltar para a Home -->
+          <li><a href="index.html">Início</a></li>
+
+          <!-- Links de Navegação Interna da Página -->
+          <li><a href="#course-details">Visão Geral</a></li>
+          <li><a href="#design-deep-dive">Engenharia</a></li>
+          <li><a href="#tech-specs-detailed">Specs</a></li>
+          <li><a href="#strato-curiosities">Curiosidades</a></li>
+          <li><a href="#eras">Linha do Tempo</a></li>
+
+          <!-- Dropdown de Modelos (Mantido para facilitar troca) -->
+          <li class="dropdown"><a href="#" class="active"><span>Outros Modelos</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="alumni.html">Alumni</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li><a href="students-life.html">Students Life</a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="news-details.html">News Details</a></li>
-              <li><a href="event-details.html">Event Details</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="terms-of-service.html">Terms of Service</a></li>
-              <li><a href="404.html">Error 404</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown"><a href="#"><span>Modelos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="stratocaster.html">Stratocaster</a></li>
               <li><a href="telecaster.html">Telecaster</a></li>
               <li><a href="lespaul.html">Les Paul</a></li>
               <li><a href="flyingv.html">Flying V</a></li>
@@ -97,858 +141,398 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Fender Stratocaster</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Início</a></li>
+            <li class="current">Stratocaster</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
 
-      <div class="hero-wrapper">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
-              <h1>Seja bem-vindo(a) ao AGUCTA</h1>
-              <p>Neste site você encontra vários tipos de guitarras, desde as mais famosas até as mais "estranhas".</p>
-              <div class="action-buttons">
-                <a href="#about" class="btn-primary">Explore a história</a>
-                <a href="#modalModelos" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#modalModelos">
-                  Explorar modelos
-                </a>
+    <!-- Seção de Detalhes (Baseado no Course Details do Template) -->
+    <section id="course-details" class="course-details section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <!-- Coluna Principal (Esquerda) -->
+          <div class="col-lg-8">
+
+            <!-- Bloco de Introdução: Imagem + Texto lado a lado -->
+            <div class="row align-items-center mb-4">
+              <div class="col-md-5">
+                <!-- Imagem agora ocupa menos espaço e fica na lateral -->
+                <img src="assets/img/Imagem-Fender2.jpg" class="img-fluid rounded shadow-sm"
+                  alt="Guitarra Fender Stratocaster" style="border-radius: 15px !important;">
+              </div>
+              <div class="col-md-7">
+                <h3>A Rainha da Versatilidade</h3>
+                <p>
+                  A Stratocaster não é apenas uma guitarra; é um ícone cultural. Lançada em 1954, ela chocou o mundo com
+                  seu design futurista de "chifres duplos" (double-cutaway) e contornos confortáveis que abraçavam o
+                  corpo do músico. Diferente de tudo que existia na época, ela oferecia três captadores e uma alavanca
+                  de tremolo revolucionária.
+                </p>
               </div>
             </div>
-            <div class="col-lg-6 hero-media" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/Banner-Site-Guitarra.png" alt="Education" class="img-fluid main-image">
+
+            <!-- Sistema de Abas (Tabs) do Bootstrap -->
+            <ul class="nav nav-tabs mb-3" id="guitarTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="historia-tab" data-bs-toggle="tab" data-bs-target="#historia"
+                  type="button" role="tab">História</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="som-tab" data-bs-toggle="tab" data-bs-target="#som" type="button"
+                  role="tab">O Som</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="lendas-tab" data-bs-toggle="tab" data-bs-target="#lendas" type="button"
+                  role="tab">Quem Usa?</button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="guitarTabsContent">
+
+              <!-- Aba História -->
+              <div class="tab-pane fade show active" id="historia" role="tabpanel">
+                <h3>Design Revolucionário</h3>
+                <p>Leo Fender ouviu os músicos. Eles queriam uma guitarra que não machucasse as costelas (daí o "Contour
+                  Body") e que tivesse mais opções de timbre. A Strato foi a primeira a oferecer 3 captadores, embora a
+                  chave seletora de 5 posições (que permite misturar captadores) só tenha se tornado padrão anos depois,
+                  descoberta "acidentalmente" pelos músicos.</p>
+              </div>
+
+              <!-- Aba Som -->
+              <div class="tab-pane fade" id="som" role="tabpanel">
+                <h3>O famoso "Quack"</h3>
+                <p>A Stratocaster é famosa pelo seu som brilhante, estalado e articulado. É descrita frequentemente como
+                  "sino" ou "vidro".</p>
+                <ul>
+                  <li><strong>Posição Braço:</strong> Som gordo, ideal para Blues (SRV style).</li>
+                  <li><strong>Posições Intermediárias (2 e 4):</strong> O som anasalado característico de funk e pop.
+                  </li>
+                  <li><strong>Posição Ponte:</strong> Som cortante e agudo para solos de rock.</li>
+                </ul>
+              </div>
+
+              <!-- Aba Lendas -->
+              <div class="tab-pane fade" id="lendas" role="tabpanel">
+                <h3>Mestres da Strato</h3>
+                <p>É impossível listar todos, mas a Strato definiu a carreira de:</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li><i class="bi bi-star-fill text-warning me-2"></i> Jimi Hendrix</li>
+                      <li><i class="bi bi-star-fill text-warning me-2"></i> David Gilmour</li>
+                      <li><i class="bi bi-star-fill text-warning me-2"></i> Stevie Ray Vaughan</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li><i class="bi bi-star-fill text-warning me-2"></i> Eric Clapton</li>
+                      <li><i class="bi bi-star-fill text-warning me-2"></i> John Frusciante</li>
+                      <li><i class="bi bi-star-fill text-warning me-2"></i> Jeff Beck</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Coluna Lateral (Sidebar de Specs) -->
+          <div class="col-lg-4">
+            <div class="course-info d-flex justify-content-between align-items-center" style="border-radius: 20px;">
+              <div class="w-100">
+                <h3>Especificações Técnicas</h3>
+                <p><strong>Fabricante:</strong> Fender</p>
+                <p><strong>Ano de Criação:</strong> 1954</p>
+                <p><strong>Captadores:</strong> 3 Single-Coils (SSS)</p>
+                <p><strong>Corpo:</strong> Double Cutaway</p>
+                <p><strong>Madeira Comum:</strong> Alder ou Ash</p>
+                <p><strong>Ponte:</strong> Tremolo Sincronizado</p>
+
+                <div class="text-center mt-4">
+                  <a href="https://www.fender.com" target="_blank" class="btn btn-primary rounded-pill px-4">Site Oficial Fender</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 1: A Revolução do Design (Estilo Features do Template) -->
+    <section id="design-deep-dive" class="section bg-darker">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-5 order-2 order-lg-1">
+            <!-- DICA: Coloque uma foto do corpo da guitarra mostrando os cortes/curvas -->
+            <img src="assets/img/Imagem-Fender.webp" class="img-fluid rounded shadow-lg"
+              alt="Detalhes do corpo da Stratocaster" style="border-radius: 20px !important;">
+          </div>
+          <div class="col-lg-7 order-1 order-lg-2 ps-lg-5">
+            <div class="section-title pb-3 text-start">
+              <h2 class="mb-0">Engenharia "Space Age"</h2>
+              <p class="text-muted">Por que ela tem esse formato?</p>
+            </div>
+            <p>
+              No início dos anos 50, os Estados Unidos viviam a obsessão pela era espacial e pelos carros "rabo de
+              peixe" (cadillacs). Leo Fender, que não era guitarrista mas sim um engenheiro eletrônico, olhou para a
+              Telecaster (sua criação anterior) e percebeu que ela machucava as costelas dos músicos após horas de show.
+            </p>
+            <p>
+              A Stratocaster nasceu para ser a extensão do corpo humano. O resultado foi o revolucionário
+              <strong>"Contour Body"</strong>.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-md-6 icon-box d-flex gap-3" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-bezier2 fs-2" style="color: var(--accent-color);"></i>
+                <div>
+                  <h4>Tummy Cut</h4>
+                  <p class="small">Um corte na parte traseira superior para acomodar a barriga/costelas do músico.</p>
+                </div>
+              </div>
+              <div class="col-md-6 icon-box d-flex gap-3" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-armchair fs-2" style="color: var(--accent-color);"></i>
+                <div>
+                  <h4>Forearm Contour</h4>
+                  <p class="small">Um rebaixo na frente do corpo para apoiar o antebraço direito sem cortar a
+                    circulação.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="feature-cards-wrapper" data-aos="fade-up" data-aos-delay="300">
-        <div class="container">
-          <div class="container section-title" data-aos="fade-up">
-            <h2>Foco e objetivos principais</h2>
-            <p>Segue, logo abaixo, três principais focos/objetivos que temos:</p>
-          </div>
-          <div class="row gy-4">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="bi bi-book-fill"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Não somos uma loja</h3>
-                  <p>Não estamos vendendo essas guitarras, apenas fornecemos informações legais sobre elas.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="bi bi-laptop-fill"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Informações do site</h3>
-                  <p>As informações sobre as guitarras são sempre tiradas de sites oficiais ou de sites CONFIÁVEIS de
-                    análise, nada de sites paralelos.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="bi bi-people-fill"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Principal foco</h3>
-                  <p>O principal foco que temos é espalhar a magia da guitarra pelo mundo.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
-              <h3>História da guitarra</h3>
-              <h2>Conheça a história das guitarras e de como surgiram</h2>
-              <p>Logo abaixo, você verá toda a trama deste instrumento tão famoso, magnífico e completamente criativo.
-              </p>
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h4>Séculos XV-XVIII</h4>
-                    <p>A guitarra descende de instrumentos de corda antigos como o alaúde e, mais diretamente, da
-                      vihuela espanhola do século XV, que já possuía seu familiar formato de "8".</p>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h4>Século XIX</h4>
-                    <p>O luthier espanhol Antonio de Torres definiu o design do violão moderno ao aumentar o tamanho do
-                      corpo e criar o sistema de reforço interno em "leque harmônico", resultando em um som mais rico e
-                      potente.</p>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h4>Início do Século XX</h4>
-                    <p>Nos EUA, a necessidade de mais volume levou à adoção de cordas de aço. A C.F. Martin & Co. inovou
-                      com o reforço interno em "X" e criou o popular formato Dreadnought (Folk), mais robusto e com som
-                      mais grave.</p>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h4>Anos 1930-1940</h4>
-                    <p>Para ser ouvida em grandes bandas, a guitarra precisou ser amplificada com captadores magnéticos.
-                      O problema da microfonia foi solucionado com a invenção da guitarra de corpo sólido, um bloco de
-                      madeira maciça que não ressoava.</p>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h4>Anos 1950</h4>
-                    <p>Esta década foi definida pela rivalidade entre Fender e Gibson. A Fender inovou com designs
-                      modulares e som brilhante (Telecaster, Stratocaster), enquanto a Gibson ofereceu um som mais gordo
-                      e potente com a Les Paul e a invenção do captador Humbucker.</p>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h4>Dos Anos 1970 ao presente</h4>
-                    <p>A evolução continuou com as "Superstrats" de alta performance dos anos 80 para o metal, a
-                      revolução dos efeitos digitais e, mais recentemente, com o surgimento de guitarras de alcance
-                      estendido (7 e 8 cordas) para gêneros modernos.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="about-image" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/education/campus-5.webp" alt="Campus" class="img-fluid rounded">
-
-              <div class="mission-vision" data-aos="fade-up" data-aos-delay="400">
-                <div class="mission">
-                  <h3>O que a guitarra contribuiu para o mundo?</h3>
-                  <p>A guitarra transformou o planeta ao democratizar a música e se consolidar como o maior símbolo
-                    cultural de liberdade e revolução moderna, moldando comportamentos sociais e gêneros inteiros como o
-                    Rock. Além de sustentar uma indústria global bilionária e impulsionar avanços tecnológicos cruciais
-                    na engenharia de som, o instrumento atua como uma ferramenta acessível de expressão política e saúde
-                    mental, conectando pessoas e culturas de forma única ao redor do mundo.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-lg-12">
-            <div class="core-values" data-aos="fade-up" data-aos-delay="500">
-              <h3 class="text-center mb-4">Core Values</h3>
-              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                <div class="col">
-                  <div class="value-card">
-                    <div class="value-icon">
-                      <i class="bi bi-book"></i>
-                    </div>
-                    <h4>Academic Excellence</h4>
-                    <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="value-card">
-                    <div class="value-icon">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <h4>Community Engagement</h4>
-                    <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="value-card">
-                    <div class="value-icon">
-                      <i class="bi bi-lightbulb"></i>
-                    </div>
-                    <h4>Innovation</h4>
-                    <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="value-card">
-                    <div class="value-icon">
-                      <i class="bi bi-globe"></i>
-                    </div>
-                    <h4>Global Perspective</h4>
-                    <p>Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
+    <!-- SEÇÃO 2: Anatomia Técnica (Estilo Grid Cards) -->
+    <section id="tech-specs-detailed" class="section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Guitarristas Influentes</h2>
-        <p>Segue abaixo alguns dos guitarristas mais influentes, em relação à técnica na guitarra e/ou em sentido
-          cultural, e um breve resumo sobre cada um.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="testimonial-slider swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 4000
-              },
-              "slidesPerView": 1,
-              "spaceBetween": 30,
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "breakpoints": {
-                "768": {
-                  "slidesPerView": 2
-                },
-                "1200": {
-                  "slidesPerView": 3
-                }
-              }
-            }
-          </script>
-
-          <div class="swiper-wrapper">
-
-            <!-- Testimonial Slide 1 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="200">
-                <div class="testimonial-header">
-                  <h5>Eddie Van Halen</h5>
-                  <span>Guitarrista e composito</span>
-                  <br>
-                  <img src="assets/img/Eddie-Van-Halen-img.png" alt="Client" class="img-fluid" loading="lazy">
-                </div>
-                <div class="testimonial-body">
-                  <p>Eddie Van Halen foi o revolucionário sísmico que redesenhou o DNA da guitarra de rock, fundindo a
-                    técnica sobre-humana do tapping com a invenção sônica do "Brown Sound", estabelecendo um novo padrão
-                    de virtuosismo, som e, acima de tudo, alegria contagiante.</p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Importância na história:</h5>
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 2 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
-                <div class="testimonial-header">
-                  <h5>Jimi Hendrix</h5>
-                  <span>Guitarrista e cantor-compositor norte-americano</span>
-                  <br>
-                  <img src="assets/img/Jimi-Hendrix-img.png" alt="Client" class="img-fluid" loading="lazy">
-                </div>
-                <div class="testimonial-body">
-                  <p>Jimi Hendrix transformou a guitarra elétrica de um mero instrumento em uma força da natureza,
-                    criando um vocabulário sônico inteiramente novo através do uso revolucionário de feedback, efeitos e
-                    texturas, estabelecendo para sempre seu potencial ilimitado e seu papel como a voz central do rock.
-                  </p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Importância na história:</h5>
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 3 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
-                <div class="testimonial-header">
-                  <h5>Jimmy Page</h5>
-                  <span>Músico e produtor musical</span>
-                  <br>
-                  <img src="assets/img/Jimmy-Page-img.png" alt="Client" class="img-fluid" loading="lazy">
-                </div>
-                <div class="testimonial-body">
-                  <p>Indo muito além do papel de guitarrista, Jimmy Page atuou como o grande arquiteto do hard rock,
-                    construindo a fundação do gênero sobre seus riffs monumentais e uma produção visionária que mesclava
-                    o peso do blues com a delicadeza do folk, redefinindo o álbum de rock como uma obra de arte épica.
-                  </p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Importância na história:</h5>
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 4 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="500">
-                <div class="testimonial-header">
-                  <h5>Eric Clapton</h5>
-                  <span>Guitarrista e cantor-compositor britânico</span>
-                  <br>
-                  <img src="assets/img/Eric-Clapton-img.png" alt="Client" class="img-fluid" loading="lazy">
-                </div>
-                <div class="testimonial-body">
-                  <p>Eric Clapton foi o grande evangelista que apresentou o blues a uma audiência global de rock,
-                    estabelecendo o arquétipo do "guitar hero" com seu timbre pioneiro e solos que priorizavam a
-                    profundidade emocional e a narrativa melódica impecável em vez da pura experimentação sônica.</p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Importância na história:</h5>
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-            <!-- Testimonial Slide 5 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="600">
-                <div class="testimonial-header">
-                  <h5>Kurt Cobain</h5>
-                  <span>Guitarrista e vocalista americano</span>
-                  <br>
-                  <img src="assets/img/Kurt-Cobain-img.png" alt="Client" class="img-fluid" loading="lazy">
-                </div>
-                <div class="testimonial-body">
-                  <p>Kurt Cobain foi o anti-herói que redefiniu o papel do guitarrista, rejeitando o virtuosismo em
-                    favor da emoção crua e de uma abordagem focada na canção, onde riffs simples e a dinâmica
-                    "calmo-barulhento" derrubaram o rock dos anos 80 e inspiraram uma geração a pegar no instrumento.
-                  </p>
-                </div>
-                <div class="testimonial-footer">
-                  <h5>Importância na história:</h5>
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="quote-icon">
-                    <i class="bi bi-chat-quote-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Testimonial Slide -->
-
-          </div>
-
-          <div class="swiper-navigation">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-
-        </div>
-
+        <h2>Anatomia de uma Lenda</h2>
+        <p>Detalhes técnicos que mudaram a indústria para sempre.</p>
       </div>
 
-    </section><!-- /Testimonials Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <div class="intro-content" data-aos="fade-up" data-aos-delay="200">
-              <h2 class="section-heading">Transforming Lives Through Quality Education</h2>
-              <p class="section-description">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4 mt-4">
-          <div class="col-xl-3 col-lg-6 col-md-6">
-            <div class="metric-card" data-aos="flip-left" data-aos-delay="300">
-              <div class="metric-header">
-                <div class="metric-icon-wrapper">
-                  <i class="bi bi-mortarboard-fill"></i>
-                </div>
-                <div class="metric-value">
-                  <span data-purecounter-start="0" data-purecounter-end="87" data-purecounter-duration="1"
-                    class="purecounter"></span>%
-                </div>
-              </div>
-              <div class="metric-info">
-                <h4>Success Rate</h4>
-                <p>Alumni employment within 6 months</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-6 col-md-6">
-            <div class="metric-card" data-aos="flip-left" data-aos-delay="400">
-              <div class="metric-header">
-                <div class="metric-icon-wrapper">
-                  <i class="bi bi-building"></i>
-                </div>
-                <div class="metric-value">
-                  <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
-                    class="purecounter"></span>
-                </div>
-              </div>
-              <div class="metric-info">
-                <h4>Campus Locations</h4>
-                <p>Across the country serving students</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-6 col-md-6">
-            <div class="metric-card" data-aos="flip-left" data-aos-delay="500">
-              <div class="metric-header">
-                <div class="metric-icon-wrapper">
-                  <i class="bi bi-trophy-fill"></i>
-                </div>
-                <div class="metric-value">
-                  <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="1"
-                    class="purecounter"></span>+
-                </div>
-              </div>
-              <div class="metric-info">
-                <h4>Awards Received</h4>
-                <p>Recognition for educational excellence</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-6 col-md-6">
-            <div class="metric-card" data-aos="flip-left" data-aos-delay="600">
-              <div class="metric-header">
-                <div class="metric-icon-wrapper">
-                  <i class="bi bi-globe"></i>
-                </div>
-                <div class="metric-value">
-                  <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="1"
-                    class="purecounter"></span>+
-                </div>
-              </div>
-              <div class="metric-info">
-                <h4>Countries Represented</h4>
-                <p>Diverse international student body</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-lg-12">
-            <div class="highlights-section" data-aos="fade-up" data-aos-delay="700">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <div class="highlights-content">
-                    <h3 class="highlights-title">Building Tomorrow's Leaders Today</h3>
-                    <p class="highlights-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim.</p>
-                    <div class="highlights-features">
-                      <div class="feature-item" data-aos="fade-right" data-aos-delay="800">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Innovative curriculum design</span>
-                      </div>
-                      <div class="feature-item" data-aos="fade-right" data-aos-delay="900">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>World-class faculty expertise</span>
-                      </div>
-                      <div class="feature-item" data-aos="fade-right" data-aos-delay="1000">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Comprehensive student support</span>
-                      </div>
-                    </div>
-                    <div class="highlights-cta">
-                      <a href="#" class="cta-btn primary">Explore Programs</a>
-                      <a href="#" class="cta-btn secondary">Download Brochure</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="highlights-gallery">
-                    <div class="gallery-grid">
-                      <div class="gallery-item large" data-aos="zoom-in" data-aos-delay="800">
-                        <img src="assets/img/education/campus-3.webp" alt="Campus Life" class="img-fluid"
-                          loading="lazy">
-                        <div class="gallery-overlay">
-                          <h5>Modern Campus</h5>
-                        </div>
-                      </div>
-                      <div class="gallery-item small" data-aos="zoom-in" data-aos-delay="900">
-                        <img src="assets/img/education/students-5.webp" alt="Students" class="img-fluid" loading="lazy">
-                        <div class="gallery-overlay">
-                          <h6>Student Life</h6>
-                        </div>
-                      </div>
-                      <div class="gallery-item small" data-aos="zoom-in" data-aos-delay="1000">
-                        <img src="assets/img/education/teacher-7.webp" alt="Faculty" class="img-fluid" loading="lazy">
-                        <div class="gallery-overlay">
-                          <h6>Expert Faculty</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Recent News Section -->
-    <section id="recent-news" class="recent-news section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent News</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+      <div class="container">
         <div class="row gy-4">
 
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="100">
-            <article class="post-item d-flex">
-              <div class="post-img">
-                <img src="assets/img/blog/blog-post-1.webp" alt="" class="img-fluid" loading="lazy">
+          <!-- Item 1: Tremolo -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative p-4 border border-secondary rounded h-100"
+              style="background: var(--azul);">
+              <div class="icon mb-3">
+                <i class="bi bi-tsunami fs-1 text-white"></i>
               </div>
+              <h3 class="text-white">Tremolo Sincronizado</h3>
+              <p class="text-white-50">
+                Diferente das pontes Bigsby da época, Leo criou um sistema onde a ponte inteira flutua sobre pivôs,
+                balanceada por molas na parte traseira. Isso permitiu "bends" de alavanca muito mais agressivos, algo
+                que Jimi Hendrix exploraria ao extremo anos depois.
+              </p>
+            </div>
+          </div>
 
-              <div class="post-content flex-grow-1">
-                <a href="#" class="category">Design</a>
-
-                <h2 class="post-title">
-                  <a href="#">Sed ut perspiciatis unde omnis</a>
-                </h2>
-
-                <p class="post-description">
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                  magni dolores.
-                </p>
-
-                <div class="post-meta">
-                  <div class="post-author">
-                    <img src="assets/img/person/person-f-12.webp" alt="" class="img-fluid">
-                    <span class="author-name">Lina Chen</span>
-                  </div>
-                  <span class="post-date">Mar 15, 2025</span>
-                </div>
+          <!-- Item 2: Jack Plate -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative p-4 border border-secondary rounded h-100"
+              style="background: var(--azul);">
+              <div class="icon mb-3">
+                <i class="bi bi-input-cursor-text fs-1 text-white"></i>
               </div>
-            </article>
-          </div><!-- End post item -->
+              <h3 class="text-white">O Jack "Barco"</h3>
+              <p class="text-white-50">
+                Olhe para a entrada do cabo. Ela é invertida e recuada. Por que? Para evitar que o plugue batesse em
+                coisas ou quebrasse se o músico tropeçasse no cabo. Uma solução de engenharia simples que virou marca
+                registrada visual da Strato.
+              </p>
+            </div>
+          </div>
 
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="200">
-            <article class="post-item d-flex">
-              <div class="post-img">
-                <img src="assets/img/blog/blog-post-2.webp" alt="" class="img-fluid" loading="lazy">
+          <!-- Item 3: Modularidade -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative p-4 border border-secondary rounded h-100"
+              style="background: var(--azul);">
+              <div class="icon mb-3">
+                <i class="bi bi-tools fs-1 text-white"></i>
               </div>
-
-              <div class="post-content flex-grow-1">
-                <a href="#" class="category">Product</a>
-
-                <h2 class="post-title">
-                  <a href="#">At vero eos et accusamus</a>
-                </h2>
-
-                <p class="post-description">
-                  Et harum quidem rerum facilis est et expedita distinctio nam libero tempore, cum soluta nobis est
-                  eligendi.
-                </p>
-
-                <div class="post-meta">
-                  <div class="post-author">
-                    <img src="assets/img/person/person-f-13.webp" alt="" class="img-fluid">
-                    <span class="author-name">Sofia Rodriguez</span>
-                  </div>
-                  <span class="post-date">Apr 22, 2025</span>
-                </div>
-              </div>
-            </article>
-          </div><!-- End post item -->
-
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-            <article class="post-item d-flex">
-              <div class="post-img">
-                <img src="assets/img/blog/blog-post-3.webp" alt="" class="img-fluid" loading="lazy">
-              </div>
-
-              <div class="post-content flex-grow-1">
-                <a href="#" class="category">Software Engineering</a>
-
-                <h2 class="post-title">
-                  <a href="#">Temporibus autem quibusdam</a>
-                </h2>
-
-                <p class="post-description">
-                  Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
-                  consequatur.
-                </p>
-
-                <div class="post-meta">
-                  <div class="post-author">
-                    <img src="assets/img/person/person-m-10.webp" alt="" class="img-fluid">
-                    <span class="author-name">Lucas Thompson</span>
-                  </div>
-                  <span class="post-date">May 8, 2025</span>
-                </div>
-              </div>
-            </article>
-          </div><!-- End post item -->
-
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="400">
-            <article class="post-item d-flex">
-              <div class="post-img">
-                <img src="assets/img/blog/blog-post-4.webp" alt="" class="img-fluid" loading="lazy">
-              </div>
-
-              <div class="post-content flex-grow-1">
-                <a href="#" class="category">Creative</a>
-
-                <h2 class="post-title">
-                  <a href="#">Nam libero tempore soluta</a>
-                </h2>
-
-                <p class="post-description">
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                  laborum.
-                </p>
-
-                <div class="post-meta">
-                  <div class="post-author">
-                    <img src="assets/img/person/person-f-14.webp" alt="" class="img-fluid">
-                    <span class="author-name">Emma Patel</span>
-                  </div>
-                  <span class="post-date">Jun 30, 2025</span>
-                </div>
-              </div>
-            </article>
-          </div><!-- End post item -->
+              <h3 class="text-white">Construção Modular</h3>
+              <p class="text-white-50">
+                A Strato foi feita como um carro da Ford. Braço parafusado (Bolt-on) e eletrônica montada inteira no
+                escudo (Pickguard). Quebrou o braço? Desparafusa e troca. Deu defeito no som? Troca o escudo inteiro.
+                Manutenção fácil para músicos na estrada.
+              </p>
+            </div>
+          </div>
 
         </div>
+      </div>
+    </section>
 
+    <!-- SEÇÃO 3: Mitos e Curiosidades (Estilo Accordion/FAQ) -->
+    <section id="strato-curiosities" class="section bg-darker">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="content px-xl-5">
+              <h3>Curiosidades que você <strong>precisa saber</strong></h3>
+              <p class="mb-4">
+                A história da Stratocaster é cheia de acidentes felizes e mudanças que definiram eras musicais.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="accordion accordion-flush" id="faqlist">
+
+              <!-- Item 1 -->
+              <div class="accordion-item bg-transparent border-bottom border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <span class="me-3 text-danger">01</span>
+                    O segredo da Chave de 3 Posições
+                  </button>
+                </h2>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body text-white-50">
+                    Originalmente, a Strato vinha com uma chave de apenas 3 posições (Braço, Meio, Ponte). Leo Fender
+                    achava que misturar captadores não soava "puro". Foram os músicos que descobriram que, se
+                    equilibrassem a chave <em>entre</em> as posições, conseguiam um som "anasalado" único. A Fender só
+                    oficializou a chave de 5 posições em 1977!
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item bg-transparent border-bottom border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    <span class="me-3 text-danger">02</span>
+                    Pre-CBS vs. CBS: A Grande Polêmica
+                  </button>
+                </h2>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body text-white-50">
+                    Em 1965, Leo Fender vendeu a empresa para a CBS (uma rede de TV). Colecionadores pagam fortunas por
+                    modelos "Pre-CBS" (1954-1964) porque acreditam que a qualidade da madeira e a bobinagem manual dos
+                    captadores eram superiores. Na era CBS, o Headstock (mão da guitarra) ficou maior para caber um logo
+                    maior na TV.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="accordion-item bg-transparent border-bottom border-secondary">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-white shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    <span class="me-3 text-danger">03</span>
+                    A Guitarra "Frankenstein"
+                  </button>
+                </h2>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body text-white-50">
+                    A Stratocaster mais famosa da história talvez seja a "Blackie" de Eric Clapton. Ele comprou seis
+                    Stratocasters baratas em uma loja de usados em Nashville, deu três para amigos (George Harrison,
+                    Pete Townshend e Steve Winwood) e desmontou as três restantes para montar a melhor combinação de
+                    braço, corpo e captadores, criando a Blackie.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: A Evolução das Eras (Estilo Timeline/Cards Horizontal) -->
+    <section id="eras" class="section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>A Evolução das Eras</h2>
+        <p>Como o som e o visual mudaram ao longo das décadas.</p>
       </div>
 
-    </section><!-- /Recent News Section -->
+      <div class="container">
+        <div class="row">
+
+          <!-- Anos 50 -->
+          <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="card w-100 border-0" style="background: var(--azul-escuro);">
+              <div class="card-body border-start border-4 border-danger ps-4">
+                <h4 class="text-white fw-bold">Anos 50: O Nascimento</h4>
+                <h6 class="text-muted mb-3">Braço em Maple Inteiriço</h6>
+                <p class="card-text text-white-50">
+                  O som é brilhante, percussivo e "seco". O braço era uma peça única de Maple (sem escala colada). O som
+                  clássico de Buddy Holly e do início do Rock n' Roll. As cores eram geralmente Sunburst em dois tons.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anos 60 -->
+          <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="card w-100 border-0" style="background: var(--azul-escuro);">
+              <div class="card-body border-start border-4 border-primary ps-4">
+                <h4 class="text-white fw-bold">Anos 60: A Era de Ouro</h4>
+                <h6 class="text-muted mb-3">Escala em Rosewood</h6>
+                <p class="card-text text-white-50">
+                  A Fender introduziu a escala de Rosewood (jacarandá), que suavizou um pouco o agudo excessivo. O som
+                  ficou mais "doce" e encorpado. É o som de Stevie Ray Vaughan, John Mayer e Jimi Hendrix. Surgem as
+                  cores customizadas de carros (Surf Green, Fiesta Red).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Anos 70 -->
+          <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="card w-100 border-0" style="background: var(--azul-escuro);">
+              <div class="card-body border-start border-4 border-warning ps-4">
+                <h4 class="text-white fw-bold">Anos 70: Era CBS</h4>
+                <h6 class="text-muted mb-3">Headstock Gigante</h6>
+                <p class="card-text text-white-50">
+                  A qualidade oscilou, mas o visual mudou drasticamente com o "Big Headstock" (mão grande) e o ajuste do
+                  tensor na bala (Bullet Truss Rod). A madeira Ash (Freixo) ficou mais pesada. É o som e visual de
+                  Ritchie Blackmore (Deep Purple) e Yngwie Malmsteen.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- FOOTER (Copiado do Index) -->
   <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-
-        <!-- Coluna 1: Reduzida de col-lg-6 para col-lg-4 -->
-        <!-- Isso "puxa" a próxima coluna para mais perto da esquerda -->
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">AGUCTA</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p><strong>Email:</strong> <span>rafita.limagames2@gmail.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-3">
-            <a href="https://www.instagram.com/passarinhando.por.ai/" target="_blank"><i
-                class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-costa-de-lima-64aa25386/" target="_blank"><i
-                class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <!-- Coluna 2: Aumentada de col-lg-3 para col-lg-4 para equilibrar -->
-        <div class="col-lg-4 col-md-6 footer-links">
-          <h4>Links importantes</h4>
-          <ul>
-            <li><a href="index.html#hero">Início</a></li>
-            <li><a href="index.html#about">História</a></li>
-            <li><a href="#testimonials">Guitarristas importantes</a></li>
-          </ul>
-        </div>
-
-        <!-- Coluna 3: Aumentada de col-lg-3 para col-lg-4 para equilibrar -->
-        <div class="col-lg-4 col-md-12 footer-links">
-          <h4>Modelos</h4>
-          <ul>
-            <li><a href="stratocaster.html">Stratocaster</a></li>
-            <li><a href="telecaster.html">Telecaster</a></li>
-            <li><a href="lespaul.html">Les Paul</a></li>
-            <li><a href="flyingv.html">Flying V</a></li>
-            <li><a href="explorer.html">Explorer</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
+    <!-- ... (Coloque o mesmo footer do index aqui) ... -->
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">AGUCTA</strong> <span>Todos direitos reservados</span>
       </p>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
     </div>
   </footer>
 
-  <div class="modal fade" id="modalModelos" tabindex="-1" aria-labelledby="modalModelosLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-
-        <!-- Cabeçalho -->
-        <div class="modal-header">
-          <h1 class="modal-title fs-4" id="modalModelosLabel">Escolha seu estilo</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-
-        <!-- Corpo -->
-        <div class="modal-body">
-          <p>Clique no nome da guitarra para ver sua história completa.</p>
-
-          <!-- Stratocaster -->
-          <div class="mb-3">
-            <p class="mb-1">Busca conforto, versatilidade e aquele som estalado clássico?</p>
-            <a href="stratocaster.html" class="stretched-link fw-bold">
-              <i class="bi bi-music-note-beamed me-1"></i> Conheça a Stratocaster
-            </a>
-          </div>
-          <hr>
-
-          <!-- Telecaster -->
-          <div class="mb-3">
-            <p class="mb-1">Prefere a simplicidade bruta e o som cortante do country/rock?</p>
-            <a href="telecaster.html" class="stretched-link fw-bold">
-              <i class="bi bi-lightning-fill me-1"></i> Conheça a Telecaster
-            </a>
-          </div>
-          <hr>
-
-          <!-- Les Paul -->
-          <div class="mb-3">
-            <p class="mb-1">Quer um som "gordo", pesado e com sustain infinito?</p>
-            <a href="lespaul.html" class="stretched-link fw-bold">
-              <i class="bi bi-circle-fill me-1"></i> Conheça a Les Paul
-            </a>
-          </div>
-          <hr>
-
-          <!-- Flying V & Explorer -->
-          <div class="mb-3">
-            <p class="mb-1">Gosta de visuais radicais e futuristas para Hard Rock?</p>
-            <div class="d-flex gap-3">
-              <a href="flyingv.html" class="fw-bold">Flying V</a> <span>ou</span>
-              <a href="explorer.html" class="fw-bold">Explorer</a>
-            </div>
-          </div>
-
-          <!-- Aviso final -->
-          <div class="alert alert-custom mt-4 mb-0 small" role="alert">
-            <i class="bi bi-info-circle me-2"></i>
-            Modelos exóticos (Dean, Warlock, SG) estão no menu <strong>"Explore mais"</strong>.
-          </div>
-        </div>
-
-        <!-- Rodapé -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Fechar</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
+  <!-- Scripts -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>

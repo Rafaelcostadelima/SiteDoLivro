@@ -8388,3 +8388,33 @@ section,
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
+
+.text-muted {
+  color: rgba(235, 223, 204, 0.7) !important; 
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+.bg-darker {
+  background-color: rgba(0, 0, 0, 0.25); 
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Botão da Sidebar (Site Oficial) */
+.course-info .btn {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--contrast-color) !important; /* Garante texto branco */
+  transition: all 0.3s ease;
+}
+
+/* Efeito Hover (ao passar o mouse) */
+.course-info .btn:hover {
+  /* Mistura a cor de destaque com 15% de preto para escurecer levemente */
+  background-color: color-mix(in srgb, var(--accent-color), black 20%) !important;
+  border-color: color-mix(in srgb, var(--accent-color), black 25%) !important;
+  transform: translateY(-2px); /* Um leve "pulo" para cima para dar feedback visual */
+}
