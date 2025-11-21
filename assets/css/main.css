@@ -8418,3 +8418,166 @@ section {
   border-color: color-mix(in srgb, var(--accent-color), black 25%) !important;
   transform: translateY(-2px); /* Um leve "pulo" para cima para dar feedback visual */
 }
+
+/* Garante que o fundo da seção seja escuro (caso não tenha mudado no HTML) */
+#trainers {
+  background-color: var(--azul) !important; /* Azul médio para destacar do fundo preto */
+}
+
+/* Estilo dos Cards dos Criadores */
+#trainers .member {
+  background-color: var(--azul-escuro) !important; /* Fundo do card mais escuro */
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%); /* Borda sutil avermelhada */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no card */
+#trainers .member:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-color);
+}
+
+/* Ajuste das Imagens para não distorcerem */
+#trainers .member-img img {
+  width: 100%;
+  height: 300px; /* Altura fixa */
+  object-fit: cover; /* Corta a imagem para preencher sem esticar */
+  object-position: top; /* Foca no rosto da pessoa */
+  border-bottom: 3px solid var(--accent-color); /* Linha vermelha separando imagem do texto */
+}
+
+/* Ajuste do Texto dentro do card */
+#trainers .member-info {
+  background-color: var(--azul-escuro) !important;
+  padding: 25px 15px;
+}
+
+#trainers .member-info h4 {
+  color: var(--accent-color); /* Nome em Vermelho/Rosa */
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+#trainers .member-info span {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6); /* Cargo em cinza claro */
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+#trainers .member-info p {
+  color: var(--branco); /* Descrição em branco/bege */
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* O Container do Card */
+#modelos .course-item {
+  background-color: var(--azul-escuro); /* Garante o fundo escuro */
+  border-radius: 20px; /* Arredondamento moderno */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil para separar do fundo */
+  overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas */
+  transition: all 0.3s ease; /* Suaviza a animação */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+  height: 100%; /* Garante que todos os cards tenham a mesma altura */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Efeito ao passar o mouse (Hover) */
+#modelos .course-item:hover {
+  transform: translateY(-10px); /* O card sobe levemente */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* A sombra aumenta */
+  border-color: var(--accent-color); /* A borda fica vermelha/rosa */
+}
+
+/* A Imagem do Card */
+#modelos .course-item img {
+  width: 100%;
+  height: 300px; /* Define uma altura fixa para alinhar todos os cards */
+  object-fit: cover; /* Corta a imagem para preencher sem esticar */
+  transition: transform 0.5s ease;
+  border-bottom: 4px solid var(--accent-color); /* Linha colorida separando imagem do texto */
+}
+
+/* Efeito de Zoom na imagem ao passar o mouse */
+#modelos .course-item:hover img {
+  transform: scale(1.05);
+}
+
+/* O Conteúdo de Texto (AQUI ESTÁ O PADDING QUE VOCÊ PEDIU) */
+#modelos .course-content {
+  padding: 25px; /* Espaçamento interno generoso */
+  flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ajuste do Título (Stratocaster, Les Paul...) */
+#modelos .course-content h3 a {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#modelos .course-content h3 a:hover {
+  color: var(--branco);
+}
+
+/* Ajuste da Descrição */
+#modelos .course-content p {
+  color: rgba(235, 223, 204, 0.8); /* Seu tom de branco com leve transparência */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Linha superior (Badge e Ano) */
+#modelos .d-flex.justify-content-between.align-items-center.mb-3 {
+  margin-bottom: 15px !important;
+}
+
+/* O Ano (Preço/Price no template original) */
+#modelos .price {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--branco);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin: 0;
+}
+
+/* Botão "Ver Detalhes" */
+#modelos .trainer-profile span {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem !important;
+}
+
+/* Estilo do Link "Ver Detalhes" */
+#modelos .details-link {
+  color: var(--accent-color); /* Cor Vermelha/Rosa */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none; /* Remove o sublinhado padrão de link */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Efeito ao passar o mouse no link */
+#modelos .details-link:hover {
+  color: var(--branco); /* Fica branco ao passar o mouse */
+  padding-left: 5px; /* Move levemente para a direita para dar sensação de movimento */
+}
