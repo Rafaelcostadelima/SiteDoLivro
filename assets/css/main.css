@@ -8405,7 +8405,7 @@ section {
 
 /* Botão da Sidebar (Site Oficial) */
 .course-info .btn {
-  background-color: var(--accent-color) !important;
+  background-color: color-mix(in srgb, var(--accent-color), black 10%) !important;
   border-color: var(--accent-color) !important;
   color: var(--contrast-color) !important; /* Garante texto branco */
   transition: all 0.3s ease;
