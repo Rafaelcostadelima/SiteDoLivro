@@ -29,21 +29,28 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Pequeno ajuste CSS inline para garantir compatibilidade dos novos elementos com o tema escuro -->
   <style>
     /* Ajuste para os cards de "Cursos" (Guitarras) e "Trainers" (Luthiers) ficarem escuros */
-    .course-item, .member {
+    .course-item,
+    .member {
       background-color: var(--azul) !important;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .course-content h3 a, .member-info h4 {
+
+    .course-content h3 a,
+    .member-info h4 {
       color: var(--accent-color) !important;
     }
-    .course-content p, .member-info span, .member-info p {
+
+    .course-content p,
+    .member-info span,
+    .member-info p {
       color: var(--branco) !important;
     }
+
     .member-info {
-      background-color: var(--azul-escuro) !important; /* Fundo da info do luthier */
+      background-color: var(--azul-escuro) !important;
+      /* Fundo da info do luthier */
     }
   </style>
 </head>
@@ -51,7 +58,8 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <img src="assets/img/LogoSiteGuitarra.ico" alt="Logo com AGUCTA escrito em branco">
@@ -65,15 +73,17 @@
           <li><a href="#modelos">Modelos</a></li>
           <li><a href="#trainers">Mentes Brilhantes</a></li>
           <li><a href="#lendas">Lendas</a></li>
-          
-          <li class="dropdown"><a href="#"><span>Menu de Modelos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+          <li class="dropdown"><a href=""><span>Menu de Modelos</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="stratocaster.html">Stratocaster</a></li>
               <li><a href="telecaster.html">Telecaster</a></li>
               <li><a href="lespaul.html">Les Paul</a></li>
               <li><a href="flyingv.html">Flying V</a></li>
               <li><a href="explorer.html">Explorer</a></li>
-              <li class="dropdown"><a href="#"><span>Explore mais</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href=""><span>Explore mais</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="deanml.html">Dean ML</a></li>
                   <li><a href="warlock.html">Warlock</a></li>
@@ -103,8 +113,8 @@
               <h1>Seja bem-vindo(a) ao AGUCTA</h1>
               <p>Neste site você encontra vários tipos de guitarras, desde as mais famosas até as mais "estranhas".</p>
               <div class="action-buttons">
-                <a href="#about" class="btn-primary">Explore a história</a>
-                <a href="#modelos" class="btn-secondary">Explorar modelos</a>
+                <a href="#foco" class="btn-primary">Principais focos</a>
+                <a href="#about" class="btn-secondary">Explore a história</a>
               </div>
             </div>
             <div class="col-lg-6 hero-media" data-aos="zoom-in" data-aos-delay="200">
@@ -113,52 +123,55 @@
           </div>
         </div>
       </div>
-
-      <div class="feature-cards-wrapper" data-aos="fade-up" data-aos-delay="300">
-        <div class="container">
-          <div class="container section-title" data-aos="fade-up">
-            <h2>Foco e objetivos principais</h2>
-            <p>Segue, logo abaixo, três principais focos/objetivos que temos:</p>
-          </div>
-          <div class="row gy-4">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="bi bi-book-fill"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Não somos uma loja</h3>
-                  <p>Não estamos vendendo <strong>NADA</strong>. Queremos apenas espalhar a beleza do mundo das guitarras.</p>
+      <section id="foco">
+        <div class="feature-cards-wrapper" data-aos="fade-up" data-aos-delay="300">
+          <div class="container">
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Foco e objetivos principais</h2>
+              <p>Segue, logo abaixo, três principais focos/objetivos que temos:</p>
+            </div>
+            <div class="row gy-4">
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="bi bi-book-fill"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Não somos uma loja</h3>
+                    <p>Não estamos vendendo <strong>NADA</strong>. Queremos apenas espalhar a beleza do mundo das
+                      guitarras.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="bi bi-laptop-fill"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Informações do site</h3>
-                  <p>As informações sobre as guitarras são sempre tiradas de sites oficiais ou de sites CONFIÁVEIS de análise, nada de sites paralelos.</p>
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="bi bi-laptop-fill"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Informações do site</h3>
+                    <p>As informações sobre as guitarras são sempre tiradas de sites oficiais ou de sites CONFIÁVEIS de
+                      análise, nada de sites paralelos.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="bi bi-people-fill"></i>
-                </div>
-                <div class="feature-content">
-                  <h3>Principal foco</h3>
-                  <p>O principal foco que temos é espalhar a magia da guitarra pelo mundo.</p>
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h3>Principal foco</h3>
+                    <p>O principal foco que temos é espalhar a magia da guitarra pelo mundo.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
 
     <!-- About Section -->
@@ -169,7 +182,8 @@
             <div class="about-content" data-aos="fade-up" data-aos-delay="200">
               <h3>História da guitarra</h3>
               <h2>Conheça a história das guitarras e de como surgiram</h2>
-              <p>Logo abaixo, você verá toda a trama deste instrumento tão famoso, magnífico e completamente criativo.</p>
+              <p>Logo abaixo, você verá toda a trama deste instrumento tão famoso, magnífico e completamente criativo.
+              </p>
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="timeline-dot"></div>
@@ -205,11 +219,13 @@
 
           <div class="col-lg-6">
             <div class="about-image" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/Jimi-Hendrix-tocando.jpg" alt="O guitarrista Jimi Hendrix tocando guitarra" class="img-fluid rounded">
+              <img src="assets/img/Jimi-Hendrix-tocando.jpg" alt="O guitarrista Jimi Hendrix tocando guitarra"
+                class="img-fluid rounded">
               <div class="mission-vision" data-aos="fade-up" data-aos-delay="400">
                 <div class="mission">
                   <h3>O que a guitarra contribuiu para o mundo?</h3>
-                  <p>A guitarra transformou o planeta ao democratizar a música e se consolidar como o maior símbolo cultural de liberdade e revolução moderna.</p>
+                  <p>A guitarra transformou o planeta ao democratizar a música e se consolidar como o maior símbolo
+                    cultural de liberdade e revolução moderna.</p>
                 </div>
               </div>
             </div>
@@ -268,7 +284,7 @@
       </div>
       <div class="container">
         <div class="row">
-          
+
           <!-- Card 1: Strato -->
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="course-item">
@@ -352,7 +368,8 @@
         <div class="row gy-5">
           <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
             <div class="member-img">
-              <img src="assets/img/leo-fender.jpg" class="img-fluid" alt="Leo Fender" style="width:100%; height:300px; object-fit:cover; margin-top: 10px; border-radius: 15px !important;">
+              <img src="assets/img/leo-fender.jpg" class="img-fluid" alt="Leo Fender"
+                style="width:100%; height:300px; object-fit:cover; margin-top: 10px; border-radius: 15px !important;">
             </div>
             <div class="member-info text-center">
               <h4>Leo Fender</h4>
@@ -362,7 +379,8 @@
           </div>
           <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
             <div class="member-img">
-              <img src="assets/img/Les-Paul-Criador.jpg" class="img-fluid" alt="Les Paul" style="width:100%; height:300px; object-fit:cover; margin-top: 10px; border-radius: 15px !important;">
+              <img src="assets/img/Les-Paul-Criador.jpg" class="img-fluid" alt="Les Paul"
+                style="width:100%; height:300px; object-fit:cover; margin-top: 10px; border-radius: 15px !important;">
             </div>
             <div class="member-info text-center">
               <h4>Les Paul</h4>
@@ -372,7 +390,8 @@
           </div>
           <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
             <div class="member-img">
-              <img src="assets/img/jim-marshall.jpg" class="img-fluid" alt="Jim Marshall" style="width:100%; height:300px; object-fit:cover; margin-top: 10px; border-radius: 15px !important;">
+              <img src="assets/img/jim-marshall.jpg" class="img-fluid" alt="Jim Marshall"
+                style="width:100%; height:300px; object-fit:cover; margin-top: 10px; border-radius: 15px !important;">
             </div>
             <div class="member-info text-center">
               <h4>Jim Marshall</h4>
@@ -419,7 +438,8 @@
                   <p>Redesenhou o DNA da guitarra rock com o tapping e o "Brown Sound".</p>
                 </div>
                 <div class="testimonial-footer">
-                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 </div>
               </div>
             </div>
@@ -435,7 +455,8 @@
                   <p>Transformou o feedback em arte e expandiu as fronteiras sônicas do instrumento.</p>
                 </div>
                 <div class="testimonial-footer">
-                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 </div>
               </div>
             </div>
@@ -451,7 +472,8 @@
                   <p>Criou a fundação do Hard Rock com riffs monumentais e produção visionária.</p>
                 </div>
                 <div class="testimonial-footer">
-                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 </div>
               </div>
             </div>
@@ -467,7 +489,8 @@
                   <p>O arquétipo do Guitar Hero, misturando a emoção do Blues com a força do Rock.</p>
                 </div>
                 <div class="testimonial-footer">
-                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                  <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                 </div>
               </div>
             </div>
@@ -493,8 +516,10 @@
             <p><strong>Email:</strong> <span>rafita.limagames2@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-3">
-            <a href="https://www.instagram.com/passarinhando.por.ai/" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-costa-de-lima-64aa25386/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/passarinhando.por.ai/" target="_blank"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rafael-costa-de-lima-64aa25386/" target="_blank"><i
+                class="bi bi-linkedin"></i></a>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 footer-links">
@@ -520,7 +545,8 @@
       </div>
     </div>
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">AGUCTA</strong> <span>Todos direitos reservados</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">AGUCTA</strong> <span>Todos direitos reservados</span>
+      </p>
       <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
     </div>
   </footer>
@@ -537,12 +563,14 @@
           <p>Clique no nome da guitarra para ver sua história completa.</p>
           <div class="mb-3">
             <p class="mb-1">Busca conforto e versatilidade?</p>
-            <a href="stratocaster.html" class="stretched-link fw-bold"><i class="bi bi-music-note-beamed me-1"></i> Stratocaster</a>
+            <a href="stratocaster.html" class="stretched-link fw-bold"><i class="bi bi-music-note-beamed me-1"></i>
+              Stratocaster</a>
           </div>
           <hr>
           <div class="mb-3">
             <p class="mb-1">Prefere a simplicidade bruta?</p>
-            <a href="telecaster.html" class="stretched-link fw-bold"><i class="bi bi-lightning-fill me-1"></i> Telecaster</a>
+            <a href="telecaster.html" class="stretched-link fw-bold"><i class="bi bi-lightning-fill me-1"></i>
+              Telecaster</a>
           </div>
           <hr>
           <div class="mb-3">
@@ -561,7 +589,8 @@
     </div>
   </div>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
@@ -577,4 +606,5 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
