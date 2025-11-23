@@ -38,25 +38,51 @@
 
   /**
    * Hide mobile nav on same-page/hash links
+   * CORREÇÃO FEITA AQUI:
+   * Verifica se o link clicado é um Dropdown. Se for, NÃO fecha o menu.
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
+    navmenu.addEventListener('click', (e) => {
       if (document.querySelector('.mobile-nav-active')) {
+        
+        // Se o link tiver um irmão "UL", ele é um dropdown toggle.
+        // Nesse caso, paramos a execução e NÃO fechamos o menu.
+        if (navmenu.nextElementSibling && navmenu.nextElementSibling.tagName === 'UL') {
+            return; 
+        }
+
+        // Se não for dropdown, fecha o menu normalmente (ex: clicou em "Início")
         mobileNavToogle();
       }
     });
-
   });
 
   /**
    * Toggle mobile nav dropdowns
+   * Esta função cuida de abrir/fechar o submenu e girar a setinha
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+  document.querySelectorAll('.navmenu .dropdown > a').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
+      if (document.querySelector('.mobile-nav-active')) {
+        e.preventDefault(); // Impede que o link recarregue a página
+        
+        // Alterna a classe ativa no pai (li)
+        this.parentNode.classList.toggle('active');
+        
+        // Alterna a visibilidade do submenu (ul)
+        if (this.nextElementSibling) {
+            this.nextElementSibling.classList.toggle('dropdown-active');
+        }
+        
+        // Gira a setinha (ícone)
+        let icon = this.querySelector('.toggle-dropdown');
+        if (icon) {
+            icon.classList.toggle('bi-chevron-down');
+            icon.classList.toggle('bi-chevron-up');
+        }
+
+        e.stopImmediatePropagation();
+      }
     });
   });
 
@@ -95,12 +121,14 @@
    * Animation on scroll function and init
    */
   function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 600,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
   }
   window.addEventListener('load', aosInit);
 
@@ -113,9 +141,7 @@
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
+      if (typeof Swiper !== 'undefined') {
         new Swiper(swiperElement, config);
       }
     });
@@ -126,46 +152,17 @@
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
-
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
 
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  }
 
 })();

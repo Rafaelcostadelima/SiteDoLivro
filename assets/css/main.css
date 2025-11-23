@@ -8581,3 +8581,12 @@ section {
   color: var(--branco); /* Fica branco ao passar o mouse */
   padding-left: 5px; /* Move levemente para a direita para dar sensação de movimento */
 }
+
+@media (max-width: 1199px) {
+  .navmenu .dropdown > a {
+    cursor: pointer;
+    width: 100%;     
+    display: flex;
+    justify-content: space-between;
+  }
+}

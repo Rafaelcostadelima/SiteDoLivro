@@ -4,85 +4,87 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>404 - College Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>404 - AGUCTA</title>
+  <meta name="description" content="Página não encontrada">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/LogoSiteGuitarra.ico" rel="icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: College
-  * Template URL: https://bootstrapmade.com/college-bootstrap-education-template/
-  * Updated: Jun 19 2025 with Bootstrap v5.3.6
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- CSS Específico para a 404 (Dark Mode) -->
+  <style>
+    /* Ajuste do ícone de erro */
+    .error-404 .error-icon i {
+        color: var(--accent-color);
+        font-size: 100px;
+    }
+    /* Ajuste do título 404 */
+    .error-404 .error-code {
+        color: var(--accent-color);
+        font-size: 120px;
+        font-weight: 700;
+    }
+    /* Ajuste de fundo da seção */
+    .error-404 {
+        background-color: var(--background-color); /* Azul Escuro */
+        color: var(--branco);
+    }
+    .btn-primary {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+    .btn-primary:hover {
+        background-color: color-mix(in srgb, var(--accent-color), black 15%);
+    }
+  </style>
 </head>
 
 <body class="page-404">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/LogoSiteGuitarra.ico" alt="Logo de um livro azul triste">
+        <img src="assets/img/LogoSiteGuitarra.ico" alt="Logo AGUCTA">
         <h1 class="sitename">AGUCTA</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Início</a></li>
-          <li><a href="#about">Sobre</a></li>
-
-          <li><a href="students-life.html">Students Life</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="alumni.html">Alumni</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i
-                class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#about">História</a></li>
+          <li><a href="index.html#modelos">Modelos</a></li>
+          <li><a href="index.html#lendas">Lendas</a></li>
+          
+          <li class="dropdown"><a href="#"><span>Menu de Modelos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="news-details.html">News Details</a></li>
-              <li><a href="event-details.html">Event Details</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="terms-of-service.html">Terms of Service</a></li>
-              <li><a href="404.html">Error 404</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown"><a href="#"><span>Modelos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Stratocaster</a></li>
-              <li><a href="#">Telecaster</a></li>
-              <li><a href="#">Les Paul</a></li>
-              <li><a href="#">Flying V</a></li>
-              <li><a href="#">Explorer</a></li>
-              <li class="dropdown"><a href="#"><span>Explore mais</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li><a href="stratocaster.html">Stratocaster</a></li>
+              <li><a href="telecaster.html">Telecaster</a></li>
+              <li><a href="lespaul.html">Les Paul</a></li>
+              <li><a href="flyingv.html">Flying V</a></li>
+              <li><a href="explorer.html">Explorer</a></li>
+              <li class="dropdown"><a href="#"><span>Explore mais</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="#">Dean ML</a></li>
-                  <li><a href="#">Warlock</a></li>
-                  <li><a href="#">SG</a></li>
-                  <li><a href="#">Jaguar</a></li>
-                  <li><a href="#">Mustang</a></li>
-                  <li><a href="#">ES-335</a></li>
+                  <li><a href="deanml.html">Dean ML</a></li>
+                  <li><a href="warlock.html">Warlock</a></li>
+                  <li><a href="sg.html">SG</a></li>
+                  <li><a href="jaguar.html">Jaguar</a></li>
+                  <li><a href="mustang.html">Mustang</a></li>
+                  <li><a href="es335.html">ES-335</a></li>
                 </ul>
               </li>
             </ul>
@@ -97,9 +99,9 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title light-background">
+    <div class="page-title" data-aos="fade">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">404</h1>
+        <h1 class="mb-2 mb-lg-0">Página Não Encontrada</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Início</a></li>
@@ -107,7 +109,7 @@
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Error 404 Section -->
     <section id="error-404" class="error-404 section">
@@ -116,30 +118,29 @@
 
         <div class="text-center">
           <div class="error-icon mb-4" data-aos="zoom-in" data-aos-delay="200">
-            <i class="bi bi-exclamation-circle"></i>
+            <i class="bi bi-music-note-beamed"></i> <!-- Mudei o ícone para música -->
           </div>
 
           <h1 class="error-code mb-4" data-aos="fade-up" data-aos-delay="300">404</h1>
 
-          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">Oops! Page Not Found</h2>
+          <h2 class="error-title mb-3" data-aos="fade-up" data-aos-delay="400">Acorde Quebrado!</h2>
 
           <p class="error-text mb-4" data-aos="fade-up" data-aos-delay="500">
-            A página que você está procurando deve estar desativada.
+            A página que você está procurando deve ter sido desafinada ou removida do repertório.
           </p>
 
           <div class="error-action" data-aos="fade-up" data-aos-delay="700">
-            <a href="index.html" class="btn btn-primary">Volte para o Início</a>
+            <a href="index.html" class="btn btn-primary py-3 px-5 rounded-pill">Voltar para o Palco (Início)</a>
           </div>
         </div>
 
       </div>
 
-    </section><!-- /Error 404 Section -->
+    </section>
 
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
-
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
@@ -150,87 +151,43 @@
             <p><strong>Email:</strong> <span>rafita.limagames2@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-3">
-            <a href="https://www.instagram.com/passarinhando.por.ai/" target="_blank"><i
-                class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/rafael-costa-de-lima-64aa25386/" target="_blank"><i
-                class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/passarinhando.por.ai/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rafael-costa-de-lima-64aa25386/" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
+        <div class="col-lg-4 col-md-6 footer-links">
           <h4>Links importantes</h4>
           <ul>
             <li><a href="index.html#hero">Início</a></li>
-            <li><a href="index.html#about">Sobre</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="index.html#about">História</a></li>
+            <li><a href="index.html#lendas">Guitarristas importantes</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+        <div class="col-lg-4 col-md-12 footer-links">
+          <h4>Modelos</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="stratocaster.html">Stratocaster</a></li>
+            <li><a href="telecaster.html">Telecaster</a></li>
+            <li><a href="lespaul.html">Les Paul</a></li>
+            <li><a href="flyingv.html">Flying V</a></li>
+            <li><a href="explorer.html">Explorer</a></li>
           </ul>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
-        </div>
-
       </div>
     </div>
-
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">AGUCTA</strong> <span>Todos direitos reservados</span>
-      </p>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">AGUCTA</strong> <span>Todos direitos reservados</span></p>
+      <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
