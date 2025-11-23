@@ -8590,3 +8590,20 @@ section {
     justify-content: space-between;
   }
 }
+
+@media (max-width: 991px) {
+  .course-details .course-info {
+    margin-top: 3rem; /* Equivale ao mt-5 */
+  }
+}
+
+/* 2. Ajuste da Imagem de Introdução */
+/* O Bootstrap quebra o 'col-md-5' quando a tela é menor que 768px.
+   Então, aplicamos a margem embaixo da imagem apenas em celulares. */
+@media (max-width: 767px) {
+  /* Seleciona a imagem que está dentro da linha de introdução */
+  .course-details .row.align-items-center img {
+    margin-bottom: 1.5rem; /* Equivale ao mb-4 */
+    width: 100%; /* Garante que ela ocupe a largura total no mobile */
+  }
+}
